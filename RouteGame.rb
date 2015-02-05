@@ -27,10 +27,10 @@ get '/drawrandom' do
 end
 
 #Input from user on card
-get '/draw/:string/:object' do
+get '/draw/:type/:card' do
   #set card specs
-  type = params[:string].downcase
-  card = params[:object]
+  type = params[:type].downcase
+  card = params[:card]
   card = card.to_s.downcase
 
   #change to correct cards
